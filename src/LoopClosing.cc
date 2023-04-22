@@ -53,7 +53,7 @@ namespace ORB_SLAM2
 
     void LoopClosing::Run()
     {
-        /* mbFinished = false;
+        mbFinished = false;
 
         while (1)
         {
@@ -81,7 +81,7 @@ namespace ORB_SLAM2
             usleep(5000);
         }
 
-        SetFinish(); */
+        SetFinish();
     }
 
     void LoopClosing::InsertKeyFrame(KeyFrame *pKF)
@@ -556,7 +556,7 @@ namespace ORB_SLAM2
         }
 
         // Optimize graph
-       /*  Optimizer::OptimizeEssentialGraph(mpMap, mpMatchedKF, mpCurrentKF, NonCorrectedSim3, CorrectedSim3, LoopConnections, mbFixScale);
+        Optimizer::OptimizeEssentialGraph(mpMap, mpMatchedKF, mpCurrentKF, NonCorrectedSim3, CorrectedSim3, LoopConnections, mbFixScale);
 
         mpMap->InformNewBigChange();
 
@@ -568,7 +568,7 @@ namespace ORB_SLAM2
         mbRunningGBA = true;
         mbFinishedGBA = false;
         mbStopGBA = false;
-        mpThreadGBA = new thread(&LoopClosing::RunGlobalBundleAdjustment, this, mpCurrentKF->mnId); */
+        mpThreadGBA = new thread(&LoopClosing::RunGlobalBundleAdjustment, this, mpCurrentKF->mnId);
 
         // Loop closed. Release Local Mapping.
         mpLocalMapper->Release();

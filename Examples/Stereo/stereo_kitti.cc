@@ -127,8 +127,8 @@ int main(int argc, char **argv)
     SLAM.SaveTrajectoryKITTI("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/stereo/CameraTrajectory.txt");
 
     // Save pose graph(g2o format)
-    SLAM.SavePoseGraph("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/stereo/posegraph.g2o");
-    SLAM.SavePoseGraph_no_error("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/stereo/posegraph_no_error.g2o");
+    /* SLAM.SavePoseGraph("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/stereo/posegraph.g2o");
+    SLAM.SavePoseGraph_no_error("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/stereo/posegraph_no_error.g2o"); */
 
     return 0;
 }

@@ -129,10 +129,10 @@ int main(int argc, char **argv)
     // Save cov graph
     // SLAM.getlength();
     // SLAM.SaveCovGraph("/home/sun/catkin_ws/src/ORB_SLAM2/Cov/cov.txt");
-    SLAM.Save_node_id("/home/sun/catkin_ws/src/ORB_SLAM2/Cov/kf_node.txt");
+   /*  SLAM.Save_node_id("/home/sun/catkin_ws/src/ORB_SLAM2/Cov/kf_node.txt");
     // SLAM.SaveEss("/home/sun/catkin_ws/src/ORB_SLAM2/Cov/ess.txt");
     SLAM.SaveSpanningtree("/home/sun/catkin_ws/src/ORB_SLAM2/Cov/spanning_tree.txt");
-    SLAM.SaveEss("/home/sun/catkin_ws/src/ORB_SLAM2/Cov/ess.txt");
+    SLAM.SaveEss("/home/sun/catkin_ws/src/ORB_SLAM2/Cov/ess.txt"); */
 
     // Stop all threads
     SLAM.Shutdown();
@@ -154,8 +154,8 @@ int main(int argc, char **argv)
     SLAM.SaveKeyFrameTrajectoryTUM("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/rgbd/KeyFrameTrajectory.txt");
 
     // Save pose graph(g2o format)
-    SLAM.SavePoseGraph("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/rgbd/posegraph.g2o");
-    SLAM.SavePoseGraph_no_error("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/rgbd/posegraph_no_error.g2o");
+    /* SLAM.SavePoseGraph("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/rgbd/posegraph.g2o");
+    SLAM.SavePoseGraph_no_error("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/rgbd/posegraph_no_error.g2o"); */
 
     return 0;
 }
