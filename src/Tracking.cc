@@ -591,6 +591,7 @@ namespace ORB_SLAM2
 
             // Find correspondences
             ORBmatcher matcher(0.9, true);
+            // mvbPrevMatched是第一帧中的所有特征点；mvIniMatches标记匹配状态，未匹配上的标为-1
             int nmatches = matcher.SearchForInitialization(mInitialFrame, mCurrentFrame, mvbPrevMatched, mvIniMatches, 100);
 
             // Check if there are enough correspondences
@@ -1057,7 +1058,7 @@ namespace ORB_SLAM2
 
         KeyFrame *pKF = new KeyFrame(mCurrentFrame, mpMap, mpKeyFrameDB);
 
-        // 将优化前的相对位姿估计Tij存下来
+        /* // 将优化前的相对位姿估计Tij存下来，为了输出位姿图自己加的
         cv::Mat Ti = pKF->GetPose();
         for (auto &x : mvpLocalKeyFrames)
         {
@@ -1069,7 +1070,7 @@ namespace ORB_SLAM2
                     pKF->mumpTij[x->mnId] = Tij;
                 }
             }
-        }
+        } */
 
         mpReferenceKF = pKF;
         mCurrentFrame.mpReferenceKF = pKF;

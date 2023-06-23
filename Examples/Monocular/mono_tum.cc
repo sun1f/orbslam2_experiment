@@ -127,9 +127,12 @@ int main(int argc, char **argv)
     cout << "mean tracking time: " << totaltime / nImages << endl;
 
     // Save camera trajectory
-    SLAM.SaveKeyFrameTrajectoryTUM("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/mono/KeyFrameTrajectory.txt");
+    // SLAM.SaveKeyFrameTrajectoryTUM("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/mono/KeyFrameTrajectory.txt");
     // SLAM.SaveTrajectoryTUM("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/mono/CameraTrajectory.txt");
     // ERROR: SaveTrajectoryTUM cannot be used for monocular.
+
+    // output for OpenMVS
+    SLAM.SaveMap("/home/sun/catkin_ws/src/ORB_SLAM2/output_mvs/sfm.txt", im.size);
 
     return 0;
 }

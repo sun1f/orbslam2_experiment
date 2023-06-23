@@ -838,4 +838,9 @@ namespace ORB_SLAM2
         cout << endl
              << "pose graph without error saved!" << endl;
     }
+
+    void System::SaveMap(const string &filename, const cv::MatSize image_size)
+    {
+        mpMap->Save(filename, image_size);
+    }
 } // namespace ORB_SLAM

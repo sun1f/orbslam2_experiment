@@ -129,10 +129,10 @@ int main(int argc, char **argv)
     // Save cov graph
     // SLAM.getlength();
     // SLAM.SaveCovGraph("/home/sun/catkin_ws/src/ORB_SLAM2/Cov/cov.txt");
-   /*  SLAM.Save_node_id("/home/sun/catkin_ws/src/ORB_SLAM2/Cov/kf_node.txt");
-    // SLAM.SaveEss("/home/sun/catkin_ws/src/ORB_SLAM2/Cov/ess.txt");
-    SLAM.SaveSpanningtree("/home/sun/catkin_ws/src/ORB_SLAM2/Cov/spanning_tree.txt");
-    SLAM.SaveEss("/home/sun/catkin_ws/src/ORB_SLAM2/Cov/ess.txt"); */
+    /*  SLAM.Save_node_id("/home/sun/catkin_ws/src/ORB_SLAM2/Cov/kf_node.txt");
+     // SLAM.SaveEss("/home/sun/catkin_ws/src/ORB_SLAM2/Cov/ess.txt");
+     SLAM.SaveSpanningtree("/home/sun/catkin_ws/src/ORB_SLAM2/Cov/spanning_tree.txt");
+     SLAM.SaveEss("/home/sun/catkin_ws/src/ORB_SLAM2/Cov/ess.txt"); */
 
     // Stop all threads
     SLAM.Shutdown();
@@ -150,13 +150,18 @@ int main(int argc, char **argv)
     cout << "mean tracking time: " << totaltime / nImages << endl;
 
     // Save camera trajectory
-    SLAM.SaveTrajectoryTUM("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/rgbd/CameraTrajectory.txt");
-    SLAM.SaveKeyFrameTrajectoryTUM("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/rgbd/KeyFrameTrajectory.txt");
+    // SLAM.SaveTrajectoryTUM("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/rgbd/CameraTrajectory.txt");
+    // SLAM.SaveKeyFrameTrajectoryTUM("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/rgbd/KeyFrameTrajectory.txt");
 
     // Save pose graph(g2o format)
     /* SLAM.SavePoseGraph("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/rgbd/posegraph.g2o");
     SLAM.SavePoseGraph_no_error("/home/sun/catkin_ws/src/ORB_SLAM2/Trajectory/rgbd/posegraph_no_error.g2o"); */
 
+    // output for OpenMVS
+    SLAM.SaveMap("/home/sun/catkin_ws/src/ORB_SLAM2/output_mvs/sfm.txt", imRGB.size);
+
+    cout << endl
+         << "over!" << endl;
     return 0;
 }
 

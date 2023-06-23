@@ -140,6 +140,9 @@ namespace ORB_SLAM2
         void SavePoseGraph(const string &filename);
         void SavePoseGraph_no_error(const string &filename);
 
+        // output for OpenMVS
+        void SaveMap(const string &filename, const cv::MatSize image_size);
+
     private:
         // Output Covisibility graph
         std::vector<pair<int, vector<pair<int, int>>>> cgraph;
