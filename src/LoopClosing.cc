@@ -53,7 +53,7 @@ namespace ORB_SLAM2
 
     void LoopClosing::Run()
     {
-        mbFinished = false;
+        /* mbFinished = false;
 
         while (1)
         {
@@ -81,7 +81,7 @@ namespace ORB_SLAM2
             usleep(5000);
         }
 
-        SetFinish();
+        SetFinish(); */
     }
 
     void LoopClosing::InsertKeyFrame(KeyFrame *pKF)
